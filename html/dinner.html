@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheger Gebeta</title>
+    <link rel="stylesheet" href="../css/mainPage.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../mainPage.html">
+        <img src="../images/logo.jpg" alt="logo" class="logo" />
+      </a>
+      <img src="../images/navIcon.png" alt="nav icon" onclick="showNav()" />
+
+      <div id="navBox" class="navBox">
+        <img
+          src="../images/arrowIcon.png"
+          alt="arrow icon"
+          onclick="hideNav()"
+        />
+
+        <div class="top">
+          <h5 id="user_name">[Username]</h5>
+          <img src="../images/user.jpg" alt="user icon" id="user_img" />
+        </div>
+        <hr />
+        <div class="bottom">
+          <nav>
+            <ul>
+              <li>
+                <a href="../html/profile.html"
+                  ><h6>My Profile</h6>
+                  <img src="../images/userIcon.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="../html/about.html"
+                  ><h6>About</h6>
+                  <img src="../images/aboutIcon.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="../html/contact.html"
+                  ><h6>Contact</h6>
+                  <img src="../images/phoneIcon.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="../html/help.html"
+                  ><h6>Help</h6>
+                  <img src="../images/helpIcon.png" alt=""
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Filter Sidebar -->
+    <aside id="filter-sidebar" class="filter-sidebar">
+      <h2>Filters</h2>
+      <form id="filter-form">
+        <div class="filter-group">
+          <label for="date-range">Date Range:</label>
+          <input
+            type="date"
+            id="date-start"
+            name="date-start"
+            placeholder="Start Date"
+          />
+          <input
+            type="date"
+            id="date-end"
+            name="date-end"
+            placeholder="End Date"
+          />
+        </div>
+
+        <div class="filter-group">
+          <label for="price-range">Price Range:</label>
+          <input
+            type="range"
+            id="price-range"
+            name="price-range"
+            min="5"
+            max="100000"
+            step="10"
+          />
+          <output for="price-range" id="price-output">$5</output>
+        </div>
+
+        <div class="filter-group">
+          <label for="location">Location:</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter location"
+          />
+        </div>
+
+        <button type="submit">Apply Filters</button>
+      </form>
+    </aside>
+    <div id="overlay" class="overlay"></div>
+    <main>
+      <h1>Sheger Gebeta</h1>
+      <h6>Addis Ababa</h6>
+
+      <nav class="nav_1">
+        <ul>
+          <li><a href="../mainPage.html">All</a></li>
+          <!-- <li><a href="../html/saved.html">Saved</a></li> -->
+          <li><a href="../html/breakfast.html">Breakfast</a></li>
+          <li><a href="../html/lunch.html">Lunch</a></li>
+          <li><a href="../html/dinner.html">Dinner</a></li>
+          <li><a href="../html/sweets.html">Sweets</a></li>
+          <li><a href="../html/coffee.html">Coffee</a></li>
+          <li><a href="../html/date.html">Date</a></li>
+          <li><a href="../html/alchol.html">Alcohol</a></li>
+        </ul>
+      </nav>
+
+      <section class="slide">
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQPLKtV1J7x-R5psehSJo2fUATa08Nno0SYfrFH3J1BAwzQ?width=501&height=383"
+              alt="meal 1"
+              class="active"
+            />
+            <video src="../videos/dinner/meal_1.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=dinner_1"
+            ><h2>Addis York: and Miso Glazed parch</h2></a
+          >
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQOw7B05wYIsSbXNYdr1H1BUAUFjAM9RKD5aJ5hw6OlC0PU?width=494&height=391"
+              alt="meal 2"
+              class="active"
+            />
+            <video src="../videos/dinner/meal_2.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=dinner_2"
+            ><h2>Chicken Sizzling with rice: and 🍴Chicken Salad:</h2></a
+          >
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQM-Wu-18kIuQ60fDyyRqfp2AcAtUv6ZfmB67WfbWfLJkts?width=502&height=388"
+              alt="meal 3"
+              class="active"
+            />
+            <video src="../videos/dinner/meal_3.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=dinner_3"
+            ><h2>Lasagna: and 🍴Steak lovers Pizza:</h2></a
+          >
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQMFiWZXec90RLj0KRI9lfMQAQEHxcobInaUtkvIpzemtaw?width=495&height=379"
+              alt="meal 1"
+              class="active"
+            />
+            <video src="../videos/dinner/meal_4.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=dinner_4"
+            ><h2>
+              🍴Chilly beef: 🍴Sweet and sour chicken: 🍴Veggie Noodle: 🍴Beef
+              Sizzling: 🍴Hunan Chicken:
+            </h2></a
+          >
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQMs6Qz1GUnvTZreeiKO0PwDAQfTqBbse3C_KVKKGxoEXWk?width=464&height=351"
+              alt="meal 1"
+              class="active"
+            />
+            <video src="../videos/dinner/meal_5.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=dinner_5"
+            ><h2>Kitfo Pizza: 🍴Agelgil: 🍴Aroma Combo:</h2></a
+          >
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQMs6Qz1GUnvTZreeiKO0PwDAQfTqBbse3C_KVKKGxoEXWk?width=464&height=351"
+              alt="meal 1"
+              class="active"
+            />
+            <video src="../videos/dinner/meal_6.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=dinner_6"><h2>Gomen Be Siga</h2></a>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQNYqd1MDz0fSZOupI05qRTNAXzswrpCvl4XnPKuVg4G54o?width=481&height=359"
+              alt="meal 1"
+              class="active"
+            />
+            <video src="../videos/dinner/meal_7.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=dinner_7"><h2>Sishu Burger</h2></a>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="recommendation">
+        <h2>Recommendation</h2>
+        <div class="recommend_meal">
+          <a href="../html/view1.html" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQNYqd1MDz0fSZOupI05qRTNAXzswrpCvl4XnPKuVg4G54o?width=481&height=359"
+                alt="meal 3"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Avocado Tibes - And Papaya with Avode</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQMs6Qz1GUnvTZreeiKO0PwDAQfTqBbse3C_KVKKGxoEXWk?width=464&height=351"
+                alt="meal 2"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Avocado Tibes - And Papaya with Avode</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQMFiWZXec90RLj0KRI9lfMQAQEHxcobInaUtkvIpzemtaw?width=495&height=379"
+                alt="meal 1"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Avocado Tibes - And Papaya with Avode</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQOw7B05wYIsSbXNYdr1H1BUAUFjAM9RKD5aJ5hw6OlC0PU?width=494&height=391"
+                alt="meal 3"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Avocado Tibes - And Papaya with Avode</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQPLKtV1J7x-R5psehSJo2fUATa08Nno0SYfrFH3J1BAwzQ?width=501&height=383"
+                alt="meal 3"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Avocado Tibes - And Papaya with Avode</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQM-Wu-18kIuQ60fDyyRqfp2AcAtUv6ZfmB67WfbWfLJkts?width=502&height=388"
+                alt="meal 3"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Avocado Tibes - And Papaya with Avode</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- More -->
+      </section>
+
+      <div class="search_bar" id="search_bar">
+        <form>
+          <label for="search">
+            <img src="../images/searchIcon.png" alt="search icon" />
+          </label>
+          <input type="text" id="search" />
+          <a href="#" onclick="showFilterModal()">
+            <img
+              src="../images/filterIcon.png"
+              alt=""
+              class="filter"
+              id="filter"
+            />
+          </a>
+        </form>
+
+        <!-- Filter Modal -->
+        <div id="filterModal" class="filter_modal">
+          <div class="filter_content">
+            <!-- <span class="close" onclick="hideFilterModal()">&times;</span> -->
+            <h2>Filter</h2>
+            <form id="filterForm">
+              <label for="priceRange">Price Range:</label>
+              <input type="text" id="priceRange" placeholder="e.g., 10-15$" />
+
+              <label for="location">Location:</label>
+              <input type="text" id="location" placeholder="e.g., AA" />
+
+              <label for="date">Date:</label>
+              <input type="month" id="date" />
+            </form>
+            <button type="button" onclick="applyFilters()">Done</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div id="overlay"></div> -->
+
+    <script src="../js\mainPage.js"></script>
+  </body>
+</html>

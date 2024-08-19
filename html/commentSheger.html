@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="styleSheet" type="text/CSS" href="../css\comment.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>View 2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="c1">
+        <img id="foodImage" alt="" />
+
+        <div class="lg">
+          <a id="backLink">
+            <img src="../img/iconsback.png" alt="Back" />
+          </a>
+          <img id="downloadImage" src="../img/iconsdownload.png" alt="" />
+        </div>
+      </div>
+
+      <div class="c2">
+        <header>
+          <p>Reviews</p>
+          <hr />
+        </header>
+
+        <div id="wrapper"></div>
+        <div class="mymy"></div>
+        <footer>
+          <textarea
+            id="comment"
+            placeholder="Enter your comment"
+            rows="1"
+          ></textarea>
+          <button class="send" id="sendbtn" onclick="sendComment()">
+            <img src="../img/iconSend.png" alt="" />
+          </button>
+        </footer>
+      </div>
+    </div>
+
+    <script src="../js/myComment.js"></script>
+  </body>
+</html>

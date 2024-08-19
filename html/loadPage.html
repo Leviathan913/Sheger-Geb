@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="styleSheet" type="text/CSS" href="../css\styleLoadPage.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Load</title>
+  </head>
+  <body>
+    <img class="image" src="../img/sweetFood.jpg" alt="" />
+    <div class="page">
+      <div class="container">
+        <div class="logo">
+          <img id="logimg" src="../img/logoSheger.PNG" alt="ShegerLogo" />
+        </div>
+        <div>
+          <label for="" class="text t1 tt1">Sheger</label> <br />
+          <label for="" class="text t1 tt2">Gebeta</label>
+          <img class="image2" src="../img/iconsporridge1.png" alt="" />
+          ,
+        </div>
+        <div class="t2">
+          <div class="text l1">Let's Descover</div>
+          <div class="text1 l2">
+            <h3 class="head">Food</h3>
+            <h3 class="head">Travel</h3>
+            <h3 class="head">Addis</h3>
+            <h3 class="head">Addis together</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function redirectToMainPage() {
+        window.location.href = "../mainPage.html";
+      }
+      document.body.addEventListener("click", redirectToMainPage);
+
+      // Optional: Redirect after few seconds if not clicked
+      const redirectTimeout = setTimeout(() => {
+        window.location.href = "../mainPage.html";
+      }, 90000); // 90000 milliseconds = 90 seconds
+
+      document.body.addEventListener("click", () => {
+        clearTimeout(redirectTimeout);
+      });
+    </script>
+  </body>
+</html>

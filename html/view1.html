@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="styleSheet" type="text/CSS" href="../css\styleView1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>View</title>
+  </head>
+  <body>
+    <div class="container">
+      <img class="cimg" src="../img/food3.jpg" alt=" " />
+      <div class="c1">
+        <img id="foodImage" alt="" />
+        <div class="lg">
+          <a id="backLink">
+            <img src="../img/iconsback.png" alt="Back" />
+          </a>
+          <img id="downloadImage" src="../img/iconsdownload.png" alt="" />
+          <!-- class="dw" -->
+        </div>
+      </div>
+
+      <div class="c2">
+        <div class="cc1">
+          <button id="locationBtn">
+            <img src="../img/iconslocation.png" alt="" />
+          </button>
+          <hr />
+        </div>
+
+        <div class="cc2">
+          <div class="cl">
+            <img src="../img/iconsshop.png" alt="" />
+            <h6 id="placeName"></h6>
+          </div>
+          <p id="foodName"></p>
+
+          <div class="cStar">
+            <img src="../img/goldstar.png" alt="" />
+            <img src="../img/goldstar.png" alt="" />
+            <img src="../img/goldstar.png" alt="" />
+            <img src="../img/iconstar.png" alt="" />
+            <img src="../img/iconstar.png" alt="" />
+            <h4 id="reviews"></h4>
+          </div>
+          <div class="functionButtons">
+            <img id="likeFood" src="../img/iconsheart.png" alt="" />
+            <a href="commentSheger.html">
+              <img id="comment" src="../img/iconscomment.png" alt="" />
+            </a>
+            <a href="#">
+              <img id="share" src="../img/iconsshare.png" alt="" />
+            </a>
+          </div>
+          <!-- Placeholder for Share Box -->
+          <div id="shareBoxContainer" style="display: none">
+            <iframe
+              id="shareBoxIframe"
+              src="../html/share.html"
+              style="border: none; width: 100%; height: 100%"
+            ></iframe>
+          </div>
+
+          <div class="tip">
+            <p id="locationTip"></p>
+            <a id="viewListLink" href="#">
+              <button id="viewList">View Full List</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js\shegerForm.js"></script>
+  </body>
+</html>

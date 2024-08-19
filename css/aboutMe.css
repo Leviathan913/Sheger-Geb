@@ -1,0 +1,130 @@
+/* Resetting default margin and padding for all elements and ensuring consistent box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting the background color of the body to a dark shade */
+body {
+  background: #090909;
+}
+
+/* Styling the container c1, positioning it fixed at the top and spanning full width */
+.c1 {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/* Ensuring the image inside c1 takes up the full width and height of 329px */
+.c1 img {
+  width: 100%;
+  height: 329px;
+}
+
+/* Styling the back icon within c1, positioning it absolutely with a set size and margin */
+.c1 #iconback {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 12px 4px;
+}
+
+/* Styling container c2, positioning it absolutely and aligning it centrally below c1 */
+.c2 {
+  position: absolute;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 330px;
+}
+
+/* Styling the h1 element within c2, using a specific font and setting color and margins */
+.c2 h1 {
+  font-family: "DynaPuff", system-ui;
+  font-size: 34px;
+  color: orangered;
+  margin: 55px 22%;
+}
+
+/* Styling the paragraph text within c2, setting its width, color, and margins */
+.c2 .p {
+  width: 80%;
+  color: white;
+  margin: 55px 50px;
+}
+
+/* Styling the wrapper div, setting it as a flex container and evenly distributing space */
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 11vh;
+}
+
+/* Styling the contact section within the wrapper, setting width, color, font size, and padding */
+.wrapper .contact {
+  width: 160px;
+  color: white;
+  font-size: 18px;
+  padding: 10px 10px;
+}
+
+/* Styling the details section within the wrapper, positioning it relatively and setting size, color, and padding */
+.wrapper .details {
+  position: relative;
+  width: 160px;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+/* Styling the tg class, setting margins, width, and color for the text */
+.tg {
+  margin: 20px 17%;
+  width: 60%;
+  color: white;
+}
+
+/* Removing the underline from links and setting their color */
+a {
+  text-decoration: none;
+  color: rgb(0, 157, 255);
+}
+
+/* Styling images within unordered list items to a specific width */
+ul li img {
+  width: 13%;
+}
+
+/* Setting the width for elements with the emaillogo class */
+.emaillogo {
+  width: 11%;
+}
+
+/* Styling the footer, fixing it at the bottom, centering content, and setting dimensions and color */
+footer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+  padding: 20px 90px;
+  color: #eccf97;
+  font-size: 13px;
+}
+
+/* Media query for screen sizes 700px and above */
+@media (min-width: 700px) {
+  /* Adjusting tg class positioning and width for larger screens */
+  .tg {
+    margin: 20px 14%;
+    width: 15%;
+    color: white;
+    position: fixed;
+  }
+}

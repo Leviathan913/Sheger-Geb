@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheger Gebeta</title>
+    <link rel="stylesheet" href="../css/mainPage.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../mainPage.html">
+        <img src="../images/logo.jpg" alt="logo" class="logo" />
+      </a>
+      <img src="../images/navIcon.png" alt="nav icon" onclick="showNav()" />
+
+      <div id="navBox" class="navBox">
+        <img
+          src="../images/arrowIcon.png"
+          alt="arrow icon"
+          onclick="hideNav()"
+        />
+
+        <div class="top">
+          <h5 id="user_name">[Username]</h5>
+          <img src="../images/user.jpg" alt="user icon" id="user_img" />
+        </div>
+        <hr />
+        <div class="bottom">
+          <nav>
+            <ul>
+              <li>
+                <a href="../html/profile.html"
+                  ><h6>My Profile</h6>
+                  <img src="../images/userIcon.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="../html/about.html"
+                  ><h6>About</h6>
+                  <img src="../images/aboutIcon.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="../html/contact.html"
+                  ><h6>Contact</h6>
+                  <img src="../images/phoneIcon.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="../html/help.html"
+                  ><h6>Help</h6>
+                  <img src="../images/helpIcon.png" alt=""
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Filter Sidebar -->
+    <aside id="filter-sidebar" class="filter-sidebar">
+      <h2>Filters</h2>
+      <form id="filter-form">
+        <div class="filter-group">
+          <label for="date-range">Date Range:</label>
+          <input
+            type="date"
+            id="date-start"
+            name="date-start"
+            placeholder="Start Date"
+          />
+          <input
+            type="date"
+            id="date-end"
+            name="date-end"
+            placeholder="End Date"
+          />
+        </div>
+
+        <div class="filter-group">
+          <label for="price-range">Price Range:</label>
+          <input
+            type="range"
+            id="price-range"
+            name="price-range"
+            min="5"
+            max="100000"
+            step="10"
+          />
+          <output for="price-range" id="price-output">$5</output>
+        </div>
+
+        <div class="filter-group">
+          <label for="location">Location:</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter location"
+          />
+        </div>
+
+        <button type="submit">Apply Filters</button>
+      </form>
+    </aside>
+    <div id="overlay" class="overlay"></div>
+    <main>
+      <h1>Sheger Gebeta</h1>
+      <h6>Addis Ababa</h6>
+
+      <nav class="nav_1">
+        <ul>
+          <li><a href="../mainPage.html">All</a></li>
+          <!-- <li><a href="../html/saved.html">Saved</a></li> -->
+          <li><a href="../html/breakfast.html">Breakfast</a></li>
+          <li><a href="../html/lunch.html">Lunch</a></li>
+          <li><a href="../html/dinner.html">Dinner</a></li>
+          <li><a href="../html/sweets.html">Sweets</a></li>
+          <li><a href="../html/coffee.html">Coffee</a></li>
+          <li><a href="../html/date.html">Date</a></li>
+          <li><a href="../html/alchol.html">Alcohol</a></li>
+        </ul>
+      </nav>
+
+      <section class="slide">
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQOKszBdUhGOR6RUcHAHgsh3ARcvMzE-CTebV5oN0-IiogI?width=644&height=512"
+              alt="meal 1"
+              class="active"
+            />
+
+            <video src="../videos/lunch/meal_1.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=lunch_1"><h2>Combo</h2></a>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQOuGkar_AR0Q7tc3Gp4y1mWAbs2CBl5bgXdNRH1aW4tKp4?width=638&height=528"
+              alt="meal 2"
+              class="active"
+            />
+            <video src="../videos/lunch/meal_2.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=lunch_2"
+            ><h2>Toro Grill and Toro steak</h2></a
+          >
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQO_Dg3EE7GLTYe5gca7A7uBAX80XkMT5jU-REY6Od1VH7A?width=641&height=531"
+              alt="meal 3"
+              class="active"
+            />
+            <video src="../videos/lunch/meal_3.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=lunch_3"
+            ><h2>chicken big king</h2></a
+          >
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQN_BbsL90G9Q7UEz4K5E5sQAQ1c_S8XOPKnYtO2cqvmooo?width=640&height=527"
+              alt="meal 1"
+              class="active"
+            />
+            <video src="../videos/lunch/meal_4.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=lunch_4"><h2>Pesto Chicken</h2></a>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQNRv-3WpZ1hQ70MiZIwjniPAYKF9dHBU-LwZeeEZZ6aUL0?width=643&height=506"
+              alt="meal 1"
+              class="active"
+            />
+            <video src="../videos/lunch/meal_5.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=lunch_5"><h2>Toro combo</h2></a>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQMrPdY4WQ5dQYCRXE5ejuLzAQdE7_4NsJIa-ykbkAhMEpk?width=640&height=513"
+              alt="meal 1"
+              class="active"
+            />
+            <video src="../videos/lunch/meal_6.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=lunch_6"
+            ><h2>Chicken Parmesan</h2></a
+          >
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+        <div class="meal" id="mealSlides">
+          <div class="mini_slide">
+            <div class="dots">
+              <span class="dot active" onclick="currentSlide(this, 1)"></span>
+              <span class="dot" onclick="currentSlide(this, 2)"></span>
+            </div>
+            <img
+              src="https://1drv.ms/i/c/c1482289a3686769/IQP4-Yn6f8MZRpRoQ6PGOujOAWahzehTnrU8APj7awjj80w?width=637&height=532"
+              alt="meal 1"
+              class="active"
+            />
+            <video src="../videos/lunch/meal_7.mp4" controls></video>
+          </div>
+          <a href="../html/view1.html?meal=lunch_7"><h2>Fentafinto</h2></a>
+          <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="recommendation">
+        <h2>Recommendation</h2>
+        <div class="recommend_meal">
+          <a href="../html/view1.html?meal=lunch_7" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQP4-Yn6f8MZRpRoQ6PGOujOAWahzehTnrU8APj7awjj80w?width=637&height=532"
+                alt="meal 3"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Combo</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html?meal=lunch_6" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQMrPdY4WQ5dQYCRXE5ejuLzAQdE7_4NsJIa-ykbkAhMEpk?width=640&height=513"
+                alt="meal 2"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Combo</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html?meal=lunch_4" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQN_BbsL90G9Q7UEz4K5E5sQAQ1c_S8XOPKnYtO2cqvmooo?width=640&height=527"
+                alt="meal 1"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Combo</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html?meal=lunch_2" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQOuGkar_AR0Q7tc3Gp4y1mWAbs2CBl5bgXdNRH1aW4tKp4?width=638&height=528"
+                alt="meal 3"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Combo</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html?meal=lunch_1" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQOKszBdUhGOR6RUcHAHgsh3ARcvMzE-CTebV5oN0-IiogI?width=644&height=512"
+                alt="meal 3"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Combo</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="recommend_meal">
+          <a href="../html/view1.html?meal=lunch_3" class="meal_link">
+            <div class="meal_image_container">
+              <img
+                src="https://1drv.ms/i/c/c1482289a3686769/IQO_Dg3EE7GLTYe5gca7A7uBAX80XkMT5jU-REY6Od1VH7A?width=641&height=531"
+                alt="meal 3"
+                class="meal_image"
+              />
+              <div class="meal_info">
+                <h6 class="meal_restaurant">Restaurant Name</h6>
+                <h2 class="meal_name">Combo</h2>
+                <div class="stars">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- More -->
+      </section>
+
+      <div class="search_bar" id="search_bar">
+        <form>
+          <label for="search">
+            <img src="../images/searchIcon.png" alt="search icon" />
+          </label>
+          <input type="text" id="search" />
+          <a href="#" onclick="showFilterModal()">
+            <img
+              src="../images/filterIcon.png"
+              alt=""
+              class="filter"
+              id="filter"
+            />
+          </a>
+        </form>
+
+        <!-- Filter Modal -->
+        <div id="filterModal" class="filter_modal">
+          <div class="filter_content">
+            <!-- <span class="close" onclick="hideFilterModal()">&times;</span> -->
+            <h2>Filter</h2>
+            <form id="filterForm">
+              <label for="priceRange">Price Range:</label>
+              <input type="text" id="priceRange" placeholder="e.g., 10-15$" />
+
+              <label for="location">Location:</label>
+              <input type="text" id="location" placeholder="e.g., AA" />
+
+              <label for="date">Date:</label>
+              <input type="month" id="date" />
+            </form>
+            <button type="button" onclick="applyFilters()">Done</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js\mainPage.js"></script>
+  </body>
+</html>

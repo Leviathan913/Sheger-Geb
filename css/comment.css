@@ -1,0 +1,317 @@
+/* Resetting default margin and padding for all elements and ensuring consistent box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting background color and text color for the body */
+body {
+  background-color: #151f28;
+  color: white;
+}
+
+/* Making the container c1 sticky at the top of the page */
+.c1 {
+  position: sticky;
+  top: 0;
+}
+
+/* Styling the food image within c1 to be sticky at the top with a specific height and opacity */
+.c1 #foodImage {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 18em;
+  opacity: 0.5;
+}
+
+/* Styling the lg class within c1, positioning it fixed at the top and setting layout properties */
+.c1 .lg {
+  position: fixed;
+  top: 0;
+  width: 85%;
+  margin-left: 5%;
+  padding: 2%;
+  display: flex;
+  overflow: visible;
+  justify-content: space-between;
+}
+
+/* Styling images within the lg class, giving them a circular appearance and adding shadow */
+.lg img {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 27px black;
+}
+
+/* Setting the width and background color for container c2 */
+.c2 {
+  width: 100%;
+  background-color: #151f28;
+}
+
+/* Making the header within c2 fixed and setting z-index for layering, with full width and specific background color */
+.c2 header {
+  position: fixed;
+  z-index: 1;
+  top: 32%;
+  width: 100%;
+  background-color: #151f28;
+}
+
+/* Styling the paragraph text within the header, setting font, size, and margins */
+header p {
+  font-family: "DynaPuff", system-ui;
+  font-size: 25px;
+  margin-left: 22px;
+  margin-bottom: 3%;
+}
+
+/* Styling the horizontal rule (hr) within the header, setting width, margins, and opacity */
+header hr {
+  width: 90%;
+  margin-left: 22px;
+  margin-bottom: 12px;
+  opacity: 0.3;
+}
+
+/* Styling the wrapper div, positioning it relative with specific width, margins, and top position */
+#wrapper {
+  position: relative;
+  width: 96%;
+  top: 2%;
+  margin-left: 10px;
+  margin-top: 8%;
+}
+
+/* Styling the UserCon class, making it sticky with rounded corners and background color */
+.UserCon {
+  position: sticky;
+  top: 34%;
+  width: 95%;
+  margin-left: 2%;
+  margin-top: 2%;
+  border-radius: 10px;
+  background-color: #263537;
+}
+
+/* Setting the font size for the username within the UserCon container */
+#myuserName {
+  font-size: 11px;
+}
+
+/* Styling the upperContainer as a flexbox for layout control */
+.upperContainer {
+  display: flex;
+}
+
+/* Styling the profile section within upperContainer, centering content and making it circular */
+.profile {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  bottom: 0;
+}
+
+/* Setting the size of the profile image */
+.profile img {
+  width: 70%;
+}
+
+/* Styling the userName section, setting width, margins, and aligning items at the bottom */
+.userName {
+  width: 70%;
+  margin-left: 2%;
+  display: flex;
+  align-items: end;
+}
+
+/* Styling the lowerContainer section, setting relative position, size, padding, and margins */
+#lowerContainer {
+  position: relative;
+  font-size: 13px;
+  width: 89%;
+  padding-top: 1%;
+  margin-left: 10%;
+}
+
+/* Styling the comment text area, setting dimensions, background, and disabling user interaction */
+#mycom {
+  width: 80%;
+  background: none;
+  border: none;
+  color: white;
+  resize: vertical;
+  outline: none;
+  cursor: not-allowed;
+  pointer-events: none;
+  overflow-y: hidden;
+  resize: none;
+}
+
+/* Styling the footer, fixing it at the bottom, setting z-index, dimensions, background color, and border */
+footer {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #151f28;
+  padding: 10px;
+  bottom: 0;
+  border-top: 2px solid gray;
+}
+
+/* Styling the comment text area within the footer, setting width, height, margins, background color, and disabling resizing */
+#comment {
+  width: 75%;
+  height: 100%;
+  margin-left: 10%;
+  border-radius: 6px;
+  top: 3px;
+  border: none;
+  background-color: #151f28;
+  color: white;
+  resize: none;
+  overflow-y: hidden;
+  line-height: 24px;
+}
+
+/* Styling the mymy class, positioning it relative to the bottom and setting dimensions */
+.mymy {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+/* Styling the send button, removing background and border */
+.send {
+  background: none;
+  border: none;
+}
+
+/* Setting the size of the image within the send button */
+.send img {
+  width: 55%;
+  height: 24%;
+}
+
+/* Media query for screen sizes between 550px and 700px */
+@media (min-width: 550px) and (max-width: 700px) {
+  /* Hiding the body content */
+  body {
+    display: none;
+  }
+  /* Hiding and repositioning the container */
+  .container {
+    display: none;
+    position: absolute;
+    margin-left: 6%;
+    width: 80%;
+    height: 100vh;
+  }
+  /* Adjusting the width of c1 */
+  .c1 {
+    width: 100%;
+  }
+  /* Adjusting the width of lg within c1 */
+  .c1 .lg {
+    width: 65%;
+  }
+  /* Adjusting the width of c2 */
+  .c2 {
+    width: 100%;
+  }
+  /* Adjusting the width of the header within c2 */
+  .c2 header {
+    width: 80%;
+  }
+  /* Adjusting the width and height of the wrapper */
+  #wrapper {
+    width: 100%;
+    height: 80%;
+  }
+  /* Adjusting the footer width and margin */
+  footer {
+    width: 77%;
+    margin-left: 17px;
+  }
+}
+
+/* Media query for screen sizes between 701px and 910px */
+@media (min-width: 701px) and (max-width: 910px) {
+  /* Hiding the body content */
+  body {
+    display: none;
+  }
+  /* Hiding and repositioning the container */
+  .container {
+    display: none;
+    position: absolute;
+    margin-left: 11%;
+    width: 80%;
+    height: 100vh;
+  }
+  /* Adjusting the width of c1 */
+  .c1 {
+    width: 100%;
+  }
+  /* Adjusting the width of lg within c1 */
+  .c1 .lg {
+    width: 65%;
+  }
+  /* Adjusting the width of c2 */
+  .c2 {
+    width: 100%;
+  }
+  /* Adjusting the width and height of the wrapper */
+  #wrapper {
+    width: 100%;
+    height: 80%;
+  }
+  /* Adjusting the footer width and margin */
+  footer {
+    width: 76%;
+    margin-left: 17px;
+  }
+}
+
+/* Media query for screen sizes above 910px */
+@media (min-width: 910px) {
+  /* Hiding the body content */
+  body {
+    display: none;
+  }
+  /* Hiding and repositioning the container */
+  .container {
+    display: none;
+    position: absolute;
+    margin-left: 16%;
+    width: 75%;
+    height: 100vh;
+  }
+  /* Adjusting the width of c1 */
+  .c1 {
+    width: 100%;
+  }
+  /* Adjusting the width of c2 */
+  .c2 {
+    width: 100%;
+  }
+  /* Adjusting the width of the header within c2 */
+  .c2 header {
+    width: 75%;
+  }
+  /* Adjusting the width and height of the wrapper */
+  #wrapper {
+    width: 100%;
+    height: 80%;
+  }
+  /* Adjusting the footer width and margin */
+  footer {
+    width: 80%;
+    margin-left: 17px;
+  }
+}
